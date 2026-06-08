@@ -163,7 +163,7 @@ export default function Home() {
                 </Button>
               </div>
               <div className="relative h-[300px] rounded-xl overflow-hidden">
-                <Image src="/diverse-athletes-huddle.png" alt="Athletes community" fill className="object-cover" />
+                <Image src="/sunset-track-athletes.png" alt="Athletes at sunset" fill className="object-cover" />
               </div>
             </div>
           </div>
