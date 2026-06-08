@@ -3,6 +3,7 @@ import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { FeaturedAthletes } from "@/components/featured-athletes"
+import { AthleteSpotlight } from "@/components/athlete-spotlight"
 
 export default function Home() {
   return (
@@ -70,6 +71,20 @@ export default function Home() {
                 <p className="text-sm font-medium text-background/60">Message — Anything Is Possible</p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Athlete Spotlight */}
+        <section className="py-16 bg-background">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-3 text-center mb-10">
+              <p className="text-sm font-semibold text-primary uppercase tracking-widest">In the News</p>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Athlete Spotlight</h2>
+              <p className="max-w-[600px] text-muted-foreground md:text-lg">
+                Celebrating the latest achievements of our diabetic athlete community.
+              </p>
+            </div>
+            <AthleteSpotlight />
           </div>
         </section>
 

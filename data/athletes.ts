@@ -510,6 +510,7 @@ export const athletes: Athlete[] = [
     diagnosisAge: "3",
     location: "Germany",
     achievements: [
+      "2026 French Open Champion — first Grand Slam title, first German man to win a Grand Slam since Boris Becker in 1996",
       "Olympic Gold Medalist (Tokyo 2020 men's singles)",
       "Former ATP World No. 2 and winner of 21 ATP titles by age 26",
       "Founder of the Alexander Zverev Foundation supporting children with diabetes",
