@@ -501,11 +501,11 @@ export const athletes: Athlete[] = [
     id: "alexander-zverev",
     name: "Alexander Zverev",
     sport: "Tennis",
-    image: "/athletes/alexander-zverev.jpg",
+    image: "/AlexanderZverevFinale.avif",
     shortBio:
-      "Olympic Gold Medalist and former ATP World No. 2 who was diagnosed with Type 1 diabetes at age 3 and later founded a foundation to support children with diabetes.",
+      "2026 French Open Champion and Olympic Gold Medalist who has managed Type 1 diabetes since age 3, becoming the first German man to win a Grand Slam singles title since Boris Becker in 1996.",
     story:
-      'Alexander "Sascha" Zverev was diagnosed with Type 1 diabetes at age 3, but kept his condition private for most of his early career. In 2022 he publicly revealed his T1D and launched a foundation to support diabetic children. Zverev competes at the pinnacle of tennis – he won Olympic gold in 2021 and has reached the world No. 2 ranking – while using an insulin pump off court and taking injections during matches (with official clearance).\n\nHe hopes his openness will inspire others with T1D to pursue their goals without limits. His achievements include winning the Olympic Gold Medal in men\'s singles at Tokyo 2020, becoming a former ATP World No. 2 and winning 21 ATP titles by age 26, and founding the Alexander Zverev Foundation to support children with diabetes.',
+      'Alexander "Sascha" Zverev was diagnosed with Type 1 diabetes at age 3, but kept his condition private for most of his early career. In 2022 he publicly revealed his T1D and launched a foundation to support diabetic children. Zverev competes at the pinnacle of tennis – he won Olympic gold in 2021 and has reached the world No. 2 ranking – while using an insulin pump off court and taking injections during matches (with official clearance).\n\nIn June 2026, Zverev reached the pinnacle of his sport, defeating Italy\'s Flavio Cobolli in five sets to claim his first Grand Slam title at Roland Garros. The victory made him the first German man to win a Grand Slam singles title since Boris Becker in 1996. Managing his insulin pump and blood glucose levels throughout the fortnight in Paris, Zverev proved once again that Type 1 diabetes is no barrier to reaching the very top of professional tennis.\n\nHe hopes his openness will inspire others with T1D to pursue their goals without limits. His achievements include the 2026 French Open title, the Olympic Gold Medal in men\'s singles at Tokyo 2020, reaching world No. 2, and founding the Alexander Zverev Foundation to support children with diabetes.',
     quote: "The only limit is the one you set for yourself.",
     diagnosisAge: "3",
     location: "Germany",
