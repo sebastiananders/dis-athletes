@@ -6,13 +6,14 @@ import { Button } from "@/components/ui/button"
 import { athletes } from "@/data/athletes"
 
 interface AthletePageProps {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
-export default function AthletePage({ params }: AthletePageProps) {
-  const athlete = athletes.find((a) => a.id === params.id)
+export default async function AthletePage({ params }: AthletePageProps) {
+  const { id } = await params
+  const athlete = athletes.find((a) => a.id === id)
 
   if (!athlete) {
     notFound()
@@ -107,7 +108,7 @@ export default function AthletePage({ params }: AthletePageProps) {
 
           <div className="lg:col-span-2">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">{athlete.name}</h1>
-            <div className="inline-block px-3 py-1 mb-6 text-sm font-medium rounded-full bg-primary/10 text-primary">
+            <div className="inline-flex items-center px-3 py-1 mb-6 text-sm font-semibold rounded-full bg-primary/10 text-primary ring-1 ring-primary/20">
               {athlete.sport}
             </div>
 

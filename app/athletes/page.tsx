@@ -57,18 +57,18 @@ export default function AthletesPage() {
               Discover inspiring Type 1 diabetic athletes across various sports
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-3 bg-muted/50 rounded-xl p-3">
             <div className="relative">
               <Input
                 placeholder="Search athletes..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full sm:w-[250px]"
+                className="w-full sm:w-[250px] bg-background"
               />
             </div>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" className="flex items-center gap-2">
+                <Button variant="outline" className="flex items-center gap-2 bg-background">
                   <Filter className="h-4 w-4" />
                   <span>Filter by Sport</span>
                 </Button>
@@ -94,17 +94,22 @@ export default function AthletesPage() {
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredAthletes.map((athlete) => (
-              <Link key={athlete.id} href={`/athletes/${athlete.id}`}>
-                <Card className="overflow-hidden h-full transition-all hover:shadow-lg">
-                  <div className="aspect-[4/3] relative">
-                    <Image src={athlete.image || "/placeholder.svg"} alt={athlete.name} fill className="object-cover" />
+              <Link key={athlete.id} href={`/athletes/${athlete.id}`} className="group">
+                <Card className="overflow-hidden h-full transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1 border-border/60">
+                  <div className="aspect-[4/3] relative overflow-hidden">
+                    <Image
+                      src={athlete.image || "/placeholder.svg"}
+                      alt={athlete.name}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
                   </div>
                   <CardContent className="p-6">
-                    <div className="inline-block px-2 py-1 mb-3 text-xs font-medium rounded-full bg-primary/10 text-primary">
+                    <div className="inline-flex items-center px-2.5 py-1 mb-3 text-xs font-semibold rounded-full bg-primary/10 text-primary ring-1 ring-primary/20">
                       {athlete.sport}
                     </div>
                     <h3 className="text-xl font-bold">{athlete.name}</h3>
-                    <p className="text-muted-foreground mt-2 line-clamp-3">{athlete.shortBio}</p>
+                    <p className="text-muted-foreground mt-2 line-clamp-3 text-sm leading-relaxed">{athlete.shortBio}</p>
                   </CardContent>
                 </Card>
               </Link>

@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Menu, X } from "lucide-react"
+import { Activity, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
 
@@ -27,8 +27,9 @@ export function Header() {
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="text-xl font-bold">Diabetic Athletics</span>
+          <Link href="/" className="flex items-center gap-2">
+            <Activity className="h-5 w-5 text-primary" strokeWidth={2.5} />
+            <span className="text-xl font-bold tracking-tight">Diabetic Athletics</span>
           </Link>
         </div>
 
@@ -37,8 +38,10 @@ export function Header() {
             <Link
               key={route.href}
               href={route.href}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                isActive(route.href) ? "text-primary" : "text-muted-foreground"
+              className={`relative text-sm font-medium transition-colors hover:text-primary pb-0.5 ${
+                isActive(route.href)
+                  ? "text-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:rounded-full after:bg-primary after:content-['']"
+                  : "text-muted-foreground"
               }`}
             >
               {route.label}
@@ -53,7 +56,6 @@ export function Header() {
         </Button>
       </div>
 
-      {/* Mobile menu */}
       {isMenuOpen && (
         <div className="md:hidden border-b">
           <div className="container py-4">
