@@ -13,7 +13,7 @@ export const currentSpotlight: AthleteSpotlight = {
   athleteId: "alexander-zverev",
   name: "Alexander Zverev",
   sport: "Tennis",
-  image: "/athletes/alexander-zverev.jpg",
+  image: "/AlexanderZverevFinale.avif",
   badgeText: "Just In",
   headline: "Zverev Claims His First Grand Slam at the 2026 French Open",
   description:

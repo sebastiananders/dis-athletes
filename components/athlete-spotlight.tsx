@@ -19,6 +19,7 @@ export function AthleteSpotlight() {
             className="object-cover object-top"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent md:bg-gradient-to-r md:from-transparent md:to-black/10" />
+          <p className="absolute bottom-2 right-2 text-[10px] text-white/50 select-none">©Jean-Charles Caslot / FFT</p>
         </div>
 
         {/* Content */}
